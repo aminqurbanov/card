@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create cards table
+      author: Amin Qurbanov
+      changes:
+        - createTable:
+            tableName: cards
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: balance
+                  type: numeric(16,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+
+
+
+          remarks: Table to store information about cards
